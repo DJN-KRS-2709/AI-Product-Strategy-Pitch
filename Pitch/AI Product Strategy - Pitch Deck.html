@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Product Strategy Certification — Pitch Deck</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; background: #0f0f13; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #e8e8f0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .slide {
+    position: absolute; inset: 0;
+    display: none; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 60px 80px;
+    opacity: 0; transition: opacity 0.35s ease;
+  }
+  .slide.active { display: flex; opacity: 1; }
+  .slide-inner { max-width: 960px; width: 100%; }
+
+  .course-tag {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #D4A73A; margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 48px; font-weight: 900; line-height: 1.1;
+    color: #fff; margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 38px; font-weight: 800; line-height: 1.15;
+    color: #fff; margin-bottom: 18px;
+  }
+  h3 {
+    font-size: 24px; font-weight: 700; line-height: 1.3;
+    color: #e0e0f0; margin-bottom: 12px;
+  }
+  .subtitle {
+    font-size: 18px; font-weight: 400; color: #8899bb;
+    line-height: 1.6; margin-bottom: 28px; max-width: 720px;
+  }
+  p, li { font-size: 18px; color: #b0b4c8; line-height: 1.7; }
+
+  ul { list-style: none; padding: 0; }
+  ul li { padding: 6px 0; padding-left: 24px; position: relative; }
+  ul li::before {
+    content: ''; position: absolute; left: 0; top: 14px;
+    width: 8px; height: 8px; border-radius: 2px; background: #D4A73A;
+  }
+
+  strong { color: #fff; font-weight: 700; }
+  em { color: #D4A73A; font-style: normal; font-weight: 600; }
+
+  .accent { color: #D4A73A; }
+  .accent-blue { color: #60a5fa; }
+  .accent-emerald { color: #34d399; }
+  .accent-amber { color: #fbbf24; }
+  .accent-purple { color: #c084fc; }
+  .accent-red { color: #f87171; }
+  .accent-gold { color: #D4A73A; }
+
+  .big-quote {
+    font-size: 28px; font-weight: 700; color: #e0e0f0;
+    line-height: 1.5; text-align: center; max-width: 700px;
+    margin: 0 auto;
+  }
+  .big-quote em { color: #D4A73A; }
+
+  /* Arc flow */
+  .arc-flow {
+    display: flex; gap: 8px; align-items: center;
+    margin: 32px 0; flex-wrap: wrap; justify-content: center;
+  }
+  .arc-node {
+    padding: 12px 18px; border-radius: 10px; text-align: center;
+    font-size: 14px; font-weight: 700; color: #fff;
+    min-width: 120px;
+  }
+  .arc-arrow { color: #333; font-size: 20px; font-weight: 300; }
+
+  /* Module cards */
+  .mod-cards {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0;
+  }
+  .mod-card {
+    background: #161822; border: 1px solid #252840; border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .mod-num {
+    font-size: 11px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em; margin-bottom: 8px;
+  }
+  .mod-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .mod-question { font-size: 14px; color: #8899bb; line-height: 1.5; }
+
+  /* Waypoint cards */
+  .waypoints { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .waypoint {
+    display: flex; align-items: flex-start; gap: 18px;
+    background: rgba(212,167,58,0.06); border: 1px solid rgba(212,167,58,0.15);
+    border-radius: 12px; padding: 20px 24px;
+  }
+  .waypoint-icon {
+    width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 800; color: #fff;
+  }
+  .waypoint-text { flex: 1; }
+  .waypoint-text .wt-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .waypoint-text .wt-desc { font-size: 14px; color: #8899bb; line-height: 1.5; }
+
+  /* Comparison table */
+  .comp-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .comp-table th {
+    text-align: left; padding: 10px 14px; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; color: #555;
+    border-bottom: 1px solid #252840;
+  }
+  .comp-table td {
+    padding: 14px; border-bottom: 1px solid #1e1e30;
+    font-size: 15px; color: #b0b4c8; line-height: 1.5;
+  }
+  .comp-table td:first-child { font-weight: 700; color: #e0e0f0; white-space: nowrap; }
+  .comp-table tr.highlight td { color: #D4A73A; font-weight: 600; }
+  .comp-table tr.highlight td:first-child { color: #fff; }
+
+  /* Principle cards */
+  .principles { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+  .principle {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 16px 20px; background: #161822; border-radius: 10px;
+    border: 1px solid #252840;
+  }
+  .principle-num {
+    width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800; color: #fff; background: #D4A73A;
+  }
+  .principle-body .pr-title { font-size: 16px; font-weight: 700; color: #e0e0f0; margin-bottom: 2px; }
+  .principle-body .pr-desc { font-size: 13px; color: #8899bb; line-height: 1.5; }
+
+  /* Artifact layers */
+  .artifact-layers { display: flex; flex-direction: column; gap: 8px; margin: 20px 0; }
+  .artifact-layer {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 20px; border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .artifact-layer .al-mod {
+    font-size: 12px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.08em; min-width: 30px;
+  }
+  .artifact-layer .al-name { font-size: 16px; font-weight: 700; color: #e0e0f0; min-width: 130px; }
+  .artifact-layer .al-desc { font-size: 13px; color: #8899bb; }
+
+  /* Module detail */
+  .mod-detail-header {
+    font-size: 13px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 12px;
+  }
+  .mod-detail-lo {
+    font-size: 16px; color: #b0b4c8; line-height: 1.6;
+    margin-bottom: 20px; padding-left: 16px;
+    border-left: 3px solid rgba(212,167,58,0.3);
+  }
+  .mod-detail-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;
+  }
+  .mod-detail-item {
+    background: #161822; border: 1px solid #252840; border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .mod-detail-item .mdi-label {
+    font-size: 11px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 6px;
+  }
+  .mod-detail-item .mdi-text { font-size: 14px; color: #b0b4c8; line-height: 1.5; }
+
+  /* Differentiator blocks */
+  .diff-blocks { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+  .diff-block {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 18px 22px; background: rgba(212,167,58,0.05);
+    border: 1px solid rgba(212,167,58,0.12); border-radius: 12px;
+  }
+  .diff-num {
+    font-size: 24px; font-weight: 900; color: #D4A73A; min-width: 32px;
+  }
+  .diff-body .df-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+  .diff-body .df-desc { font-size: 13px; color: #8899bb; line-height: 1.5; }
+
+  /* Decision items */
+  .decisions { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+  .decision {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 20px; background: rgba(251,191,36,0.04);
+    border: 1px solid rgba(251,191,36,0.12); border-radius: 10px;
+  }
+  .decision-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .decision-body .dec-q { font-size: 15px; font-weight: 700; color: #e0e0f0; margin-bottom: 2px; }
+  .decision-body .dec-rec { font-size: 13px; color: #8899bb; line-height: 1.4; }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+  .timeline-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 14px 20px; background: #161822; border-radius: 10px;
+    border: 1px solid #252840;
+  }
+  .timeline-when {
+    font-size: 12px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.06em; color: #D4A73A; min-width: 90px; padding-top: 2px;
+  }
+  .timeline-what { font-size: 15px; color: #b0b4c8; line-height: 1.5; }
+  .timeline-what strong { color: #e0e0f0; }
+
+  /* Nav */
+  .nav {
+    position: fixed; bottom: 20px; right: 24px;
+    display: flex; gap: 8px; z-index: 100;
+  }
+  .nav-btn {
+    width: 42px; height: 42px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: #888; font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; font-family: 'Inter', sans-serif;
+  }
+  .nav-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+  .progress {
+    position: fixed; bottom: 0; left: 0; right: 0; height: 3px;
+    background: rgba(255,255,255,0.05); z-index: 100;
+  }
+  .progress-bar {
+    height: 100%; background: #D4A73A;
+    transition: width 0.35s ease;
+  }
+  .slide-counter {
+    position: fixed; bottom: 26px; left: 24px;
+    font-size: 13px; font-weight: 600; color: #444; z-index: 100;
+  }
+  .help-hint {
+    position: fixed; top: 16px; right: 24px;
+    font-size: 11px; color: #333; z-index: 100;
+  }
+
+  .speaker-notes {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0;
+    background: #1a1a24; border-top: 2px solid #D4A73A;
+    padding: 16px 32px; max-height: 200px; overflow-y: auto;
+    font-size: 14px; color: #8899bb; line-height: 1.6; z-index: 200;
+  }
+  .speaker-notes.visible { display: block; }
+  .speaker-notes strong { color: #b0b4c8; }
+  .notes-tag {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #D4A73A; margin-bottom: 6px;
+  }
+
+  .flow-line { font-size: 16px; color: #555d6e; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<!-- ===================== SLIDE 1: Title ===================== -->
+<div class="slide active" data-notes="Set the frame immediately: this is a strategic proposal, not a brainstorm. The core promise is one sentence. The positioning against competitors comes next — but here, just plant the flag. Keep it to 30 seconds and let the title do the work.">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="course-tag">AI Product Strategy Certification · Product School</div>
+    <h1 style="font-size:52px; margin-bottom:24px;">Six Questions.<br>One Strategy Brief.<br>Board-Ready by Friday.</h1>
+    <p style="font-size:20px; color:#8899bb; max-width:640px; margin:0 auto; line-height:1.7;">The only AI product strategy certification where participants build their actual strategy — economics model, eval spec, moat analysis, governance framework, and board pitch — across 6 live sessions on their real product.</p>
+    <div class="flow-line" style="margin-top:40px; text-align:center;">6 sessions · 2 hours each · Senior PMs · AI-aware</div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 2: The Gap ===================== -->
+<div class="slide" data-notes="This is the 'why now' slide. Don't spend time bashing competitors — respect them, but name the gap. Reforge is great for leadership, Maven is great for building. Nobody owns the strategic middle: what to build, how to defend it, how to price it, how to govern it, and how to pitch it. That's our lane.">
+  <div class="slide-inner">
+    <div class="course-tag">The Market Gap</div>
+    <h2>Everyone Teaches a Slice.<br>Nobody Teaches the Full Stack.</h2>
+    <table class="comp-table">
+      <thead><tr><th>Program</th><th>Focus</th><th>What's Missing</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Reforge</td>
+          <td>How to <em>lead</em> in the AI era — team structure, tooling, org scaling</td>
+          <td>Fragmented across 6 separate courses. No throughline artifact.</td>
+        </tr>
+        <tr>
+          <td>Maven</td>
+          <td>How to <em>build</em> AI products — tactical, foundational, ships one product</td>
+          <td>Stays below strategy level. Doesn't address economics, governance, or board narrative.</td>
+        </tr>
+        <tr>
+          <td>AIPC</td>
+          <td>AI fundamentals — tokens, RAG, fine-tuning, what's new</td>
+          <td>Foundational. Our prerequisite, not our competitor.</td>
+        </tr>
+        <tr class="highlight">
+          <td style="color:#D4A73A;">Product School</td>
+          <td>How to <em>win</em> with AI products — strategic, applied, artifact-driven</td>
+          <td>This is the gap. Nobody owns it yet.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 3: Positioning ===================== -->
+<div class="slide" data-notes="Three words. Lead, build, win. This is the simplest way to explain where we sit. Let this slide breathe — 10 seconds of silence after you say it. The visual does the work.">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="course-tag">Positioning</div>
+    <h2 style="font-size:42px; margin-bottom:40px;">Three Programs. Three Lanes.</h2>
+    <div style="display:flex; gap:24px; justify-content:center; margin-bottom:40px;">
+      <div style="background:#161822; border:1px solid #252840; border-radius:14px; padding:28px 32px; min-width:200px; text-align:center;">
+        <div style="font-size:13px; font-weight:800; color:#555; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Reforge</div>
+        <div style="font-size:28px; font-weight:800; color:#666;">Lead</div>
+        <div style="font-size:13px; color:#555; margin-top:8px;">Internal transformation</div>
+      </div>
+      <div style="background:#161822; border:1px solid #252840; border-radius:14px; padding:28px 32px; min-width:200px; text-align:center;">
+        <div style="font-size:13px; font-weight:800; color:#555; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Maven</div>
+        <div style="font-size:28px; font-weight:800; color:#666;">Build</div>
+        <div style="font-size:13px; color:#555; margin-top:8px;">Tactical execution</div>
+      </div>
+      <div style="background:rgba(212,167,58,0.08); border:2px solid rgba(212,167,58,0.4); border-radius:14px; padding:28px 32px; min-width:200px; text-align:center;">
+        <div style="font-size:13px; font-weight:800; color:#D4A73A; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px;">Product School</div>
+        <div style="font-size:28px; font-weight:800; color:#D4A73A;">Win</div>
+        <div style="font-size:13px; color:#a08840; margin-top:8px;">Strategic + applied</div>
+      </div>
+    </div>
+    <p style="font-size:17px; color:#8899bb;">External focus. Build AI products that are defensible, profitable, and trustworthy.</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 4: The Arc ===================== -->
+<div class="slide" data-notes="This is the most important slide. Slow down. The arc is six strategic questions — each one builds on the last. Together they produce one complete strategy document. Point to each node: 'First you figure out what to build. Then you figure out why it survives. Then whether it makes money. Then whether users trust it. Then what breaks when it scales. Then how you pitch it.' The progression is the product.">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="course-tag">The Arc</div>
+    <h2>Six Strategic Questions.<br>One Strategy Brief.</h2>
+    <div class="arc-flow">
+      <div class="arc-node" style="background:rgba(96,165,250,0.15); border:1px solid rgba(96,165,250,0.3);">
+        <div style="font-size:11px; opacity:0.6;">M1</div>The Bet
+      </div>
+      <div class="arc-arrow">→</div>
+      <div class="arc-node" style="background:rgba(52,211,153,0.12); border:1px solid rgba(52,211,153,0.25);">
+        <div style="font-size:11px; opacity:0.6;">M2</div>The Moat
+      </div>
+      <div class="arc-arrow">→</div>
+      <div class="arc-node" style="background:rgba(251,191,36,0.12); border:1px solid rgba(251,191,36,0.25);">
+        <div style="font-size:11px; opacity:0.6;">M3</div>The Margin
+      </div>
+      <div class="arc-arrow">→</div>
+      <div class="arc-node" style="background:rgba(192,132,252,0.12); border:1px solid rgba(192,132,252,0.25);">
+        <div style="font-size:11px; opacity:0.6;">M4</div>The Contract
+      </div>
+      <div class="arc-arrow">→</div>
+      <div class="arc-node" style="background:rgba(248,113,113,0.12); border:1px solid rgba(248,113,113,0.25);">
+        <div style="font-size:11px; opacity:0.6;">M5</div>The Guardrails
+      </div>
+      <div class="arc-arrow">→</div>
+      <div class="arc-node" style="background:rgba(212,167,58,0.15); border:1px solid rgba(212,167,58,0.3);">
+        <div style="font-size:11px; opacity:0.6;">M6</div>The Pitch
+      </div>
+    </div>
+    <p style="font-size:17px; color:#8899bb; margin-top:20px;">Each answer depends on the last. Together, they produce one board-ready AI product strategy.</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 5: The Throughline Artifact ===================== -->
+<div class="slide" data-notes="This is the single biggest design decision that separates us from everyone else. Not worksheets stapled together at the end. One living document that grows every session. By M6, it's board-ready. They don't leave with a certificate — they leave with a weapon.">
+  <div class="slide-inner">
+    <div class="course-tag">The Throughline Artifact</div>
+    <h2>One Document. Six Layers.<br>Board-Ready by M6.</h2>
+    <div class="artifact-layers">
+      <div class="artifact-layer" style="background:rgba(96,165,250,0.06); border-color:rgba(96,165,250,0.15);">
+        <div class="al-mod accent-blue">M1</div>
+        <div class="al-name">The Bet</div>
+        <div class="al-desc">What we're building, for whom, why now, validation evidence</div>
+      </div>
+      <div class="artifact-layer" style="background:rgba(52,211,153,0.05); border-color:rgba(52,211,153,0.12);">
+        <div class="al-mod accent-emerald">M2</div>
+        <div class="al-name">The Moat</div>
+        <div class="al-desc">Data flywheel map, defensibility analysis, vendor portability plan</div>
+      </div>
+      <div class="artifact-layer" style="background:rgba(251,191,36,0.05); border-color:rgba(251,191,36,0.12);">
+        <div class="al-mod accent-amber">M3</div>
+        <div class="al-name">The Margin</div>
+        <div class="al-desc">Cost model with cascading, pricing strategy, P&L projection</div>
+      </div>
+      <div class="artifact-layer" style="background:rgba(192,132,252,0.05); border-color:rgba(192,132,252,0.12);">
+        <div class="al-mod accent-purple">M4</div>
+        <div class="al-name">The Contract</div>
+        <div class="al-desc">Eval spec, reliability targets, confidence UX, HITL architecture</div>
+      </div>
+      <div class="artifact-layer" style="background:rgba(248,113,113,0.05); border-color:rgba(248,113,113,0.12);">
+        <div class="al-mod accent-red">M5</div>
+        <div class="al-name">The Guardrails</div>
+        <div class="al-desc">Governance framework, agent topology, compliance posture</div>
+      </div>
+      <div class="artifact-layer" style="background:rgba(212,167,58,0.06); border-color:rgba(212,167,58,0.15);">
+        <div class="al-mod accent-gold">M6</div>
+        <div class="al-name">Integration</div>
+        <div class="al-desc">Stress-test the full brief, refine the narrative, rehearse the pitch</div>
+      </div>
+    </div>
+    <p style="font-size:16px; color:#D4A73A; font-weight:600; margin-top:16px;">Not a certificate. A strategy document they can present Monday morning.</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 6: Module Overview ===================== -->
+<div class="slide" data-notes="Quick flyover. Don't read every card — hit M1 (the opener), M3 (the differentiator — economics depth nobody else has), and M6 (the payoff). Breeze through the rest. The point is: every module answers one question a CPO actually asks.">
+  <div class="slide-inner">
+    <div class="course-tag">Six Modules</div>
+    <h2>Each Module Answers One Question<br>a CPO Actually Asks</h2>
+    <div class="mod-cards">
+      <div class="mod-card" style="border-left:3px solid #60a5fa;">
+        <div class="mod-num accent-blue">Module 1</div>
+        <div class="mod-title">The Bet</div>
+        <div class="mod-question">What should we build, and how do we know fast?</div>
+      </div>
+      <div class="mod-card" style="border-left:3px solid #34d399;">
+        <div class="mod-num accent-emerald">Module 2</div>
+        <div class="mod-title">The Moat</div>
+        <div class="mod-question">Why won't this get copied in 6 months?</div>
+      </div>
+      <div class="mod-card" style="border-left:3px solid #fbbf24;">
+        <div class="mod-num accent-amber">Module 3</div>
+        <div class="mod-title">The Margin</div>
+        <div class="mod-question">Will this make money or bleed it?</div>
+      </div>
+      <div class="mod-card" style="border-left:3px solid #c084fc;">
+        <div class="mod-num accent-purple">Module 4</div>
+        <div class="mod-title">The Contract</div>
+        <div class="mod-question">Why will users trust a probabilistic system?</div>
+      </div>
+      <div class="mod-card" style="border-left:3px solid #f87171;">
+        <div class="mod-num accent-red">Module 5</div>
+        <div class="mod-title">The Guardrails</div>
+        <div class="mod-question">What breaks when this scales?</div>
+      </div>
+      <div class="mod-card" style="border-left:3px solid #D4A73A;">
+        <div class="mod-num accent-gold">Module 6</div>
+        <div class="mod-title">The Pitch</div>
+        <div class="mod-question">How do you get this funded, shipped, and adopted?</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 7: M1 Detail ===================== -->
+<div class="slide" data-notes="M1 is where we break their mental model. The True/False opening sets the tone: this isn't a beginner course. The live diagnosis on a product everyone knows (Notion, Figma, Slack) makes it visceral. They leave with their first artifact section and a prototype built with AI tools.">
+  <div class="slide-inner">
+    <div class="mod-detail-header accent-blue">Module 1 · The Bet</div>
+    <h2>What Should We Build,<br>and How Do We Know Fast?</h2>
+    <div class="mod-detail-lo">Validate your AI product bet in days, not quarters — using probabilistic thinking and AI-powered discovery to kill bad ideas before they consume a roadmap.</div>
+    <div class="mod-detail-grid">
+      <div class="mod-detail-item">
+        <div class="mdi-label accent-blue">Key Content</div>
+        <div class="mdi-text">Annual cycles obsolete. AI-powered discovery at 10x velocity. 5 AI Value Archetypes. Probabilistic prioritization.</div>
+      </div>
+      <div class="mod-detail-item">
+        <div class="mdi-label accent-blue">Build Moment</div>
+        <div class="mdi-text">Prototype one AI product idea using v0, Cursor, or Lovable. Bring it to M2.</div>
+      </div>
+      <div class="mod-detail-item">
+        <div class="mdi-label accent-blue">Peer Challenge</div>
+        <div class="mdi-text">Partner challenges diagnostic scores. Names one AI-native competitor attacking your vulnerability.</div>
+      </div>
+      <div class="mod-detail-item">
+        <div class="mdi-label accent-blue">Artifact Layer</div>
+        <div class="mdi-text">The Bet: what you're building, for whom, why now, validation evidence, confidence level.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 8: M2-M3 Detail ===================== -->
+<div class="slide" data-notes="M2 and M3 are the strategic core. M2 is about survival — can your product withstand encroachment? M3 is the one people will talk about — nobody else teaches AI economics at this depth. Hit M3 hard: 'This is the module where participants build a cost curve and pricing model they can defend to their board. No other course does this.'">
+  <div class="slide-inner">
+    <div class="course-tag">Modules 2 & 3 — The Strategic Core</div>
+    <div style="display:flex; gap:24px;">
+      <div style="flex:1; background:#161822; border:1px solid rgba(52,211,153,0.2); border-radius:14px; padding:28px;">
+        <div class="mod-detail-header accent-emerald" style="margin-bottom:8px;">M2 · The Moat</div>
+        <h3>Why Won't This Get Copied?</h3>
+        <ul style="margin-top:12px;">
+          <li>Proprietary data loops + zero-party data acquisition</li>
+          <li>Workflow embedding as switching cost</li>
+          <li>Vendor portability "Kill Switch" — swap models in 48hrs</li>
+        </ul>
+        <p style="margin-top:12px; font-size:14px; color:#34d399; font-weight:600;">Case: Jasper vs. ChatGPT</p>
+      </div>
+      <div style="flex:1; background:#161822; border:1px solid rgba(251,191,36,0.2); border-radius:14px; padding:28px;">
+        <div class="mod-detail-header accent-amber" style="margin-bottom:8px;">M3 · The Margin</div>
+        <h3>Will This Make Money?</h3>
+        <ul style="margin-top:12px;">
+          <li>80% SaaS margins → 40% with AI inference</li>
+          <li>Model cascading: cheap triage → frontier for hard cases</li>
+          <li>Hybrid pricing: seat + usage + outcome tiers</li>
+        </ul>
+        <p style="margin-top:12px; font-size:14px; color:#fbbf24; font-weight:600;">Case: Klarna's overcorrection</p>
+      </div>
+    </div>
+    <p style="margin-top:20px; font-size:16px; color:#8899bb; text-align:center;">M3 is the most underserved topic in AI product education. This module could be the one people talk about.</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 9: M4-M5 Detail ===================== -->
+<div class="slide" data-notes="M4 connects to our existing Evals course — but at the strategic level. We teach the 20% a product leader needs, not the operational 80%. M5 is the governance module that doesn't feel like compliance — it's positioned as a sales asset. The Samsung data leak case study makes governance visceral, not abstract.">
+  <div class="slide-inner">
+    <div class="course-tag">Modules 4 & 5 — Trust & Scale</div>
+    <div style="display:flex; gap:24px;">
+      <div style="flex:1; background:#161822; border:1px solid rgba(192,132,252,0.2); border-radius:14px; padding:28px;">
+        <div class="mod-detail-header accent-purple" style="margin-bottom:8px;">M4 · The Contract</div>
+        <h3>Why Will Users Trust This?</h3>
+        <ul style="margin-top:12px;">
+          <li>Golden datasets as product infrastructure</li>
+          <li>LLM-as-a-Judge for scaled evaluation</li>
+          <li>Confidence UX: show uncertainty, don't hide it</li>
+        </ul>
+        <p style="margin-top:12px; font-size:14px; color:#c084fc; font-weight:600;">Case: Air Canada chatbot liability</p>
+      </div>
+      <div style="flex:1; background:#161822; border:1px solid rgba(248,113,113,0.2); border-radius:14px; padding:28px;">
+        <div class="mod-detail-header accent-red" style="margin-bottom:8px;">M5 · The Guardrails</div>
+        <h3>What Breaks When This Scales?</h3>
+        <ul style="margin-top:12px;">
+          <li>Governance as sales weapon (EU AI Act)</li>
+          <li>Agent orchestration boundaries + safety</li>
+          <li>Shadow AI audit across the org</li>
+        </ul>
+        <p style="margin-top:12px; font-size:14px; color:#f87171; font-weight:600;">Case: Samsung data leak</p>
+      </div>
+    </div>
+    <p style="margin-top:20px; font-size:16px; color:#8899bb; text-align:center;">Strategic depth. Not operational detail. Connects to — but doesn't duplicate — our standalone Evals and Agents courses.</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 10: M6 + Capstone ===================== -->
+<div class="slide" data-notes="M6 is the payoff. 60-75 minutes of capstone. They present to the room — the room plays the board. 'Why should we fund this? What's the risk you haven't addressed?' By this point they've built every section of the brief across 5 modules. M6 integrates it into a pitch. They leave with something they can use Monday morning.">
+  <div class="slide-inner">
+    <div class="mod-detail-header accent-gold">Module 6 · The Pitch</div>
+    <h2>Board-Ready by Friday.</h2>
+    <div class="mod-detail-lo">Present a complete AI Product Strategy — continuous roadmap, margin model, eval spec, moat plan, governance framework — that you can use Monday morning.</div>
+    <div class="waypoints">
+      <div class="waypoint" style="background:rgba(212,167,58,0.06); border-color:rgba(212,167,58,0.15);">
+        <div class="waypoint-icon" style="background:#D4A73A;">1</div>
+        <div class="waypoint-text">
+          <div class="wt-title">Board-ready storytelling</div>
+          <div class="wt-desc">Translate AI system complexity into investment narratives. Multi-horizon roadmaps: quick wins + bets + moonshots.</div>
+        </div>
+      </div>
+      <div class="waypoint" style="background:rgba(212,167,58,0.06); border-color:rgba(212,167,58,0.15);">
+        <div class="waypoint-icon" style="background:#D4A73A;">2</div>
+        <div class="waypoint-text">
+          <div class="wt-title">AI GTM frictions</div>
+          <div class="wt-desc">How to demo probabilistic products. How to package outcomes, not features. How to close despite the trust barrier.</div>
+        </div>
+      </div>
+      <div class="waypoint" style="background:rgba(212,167,58,0.06); border-color:rgba(212,167,58,0.15);">
+        <div class="waypoint-icon" style="background:#D4A73A;">3</div>
+        <div class="waypoint-text">
+          <div class="wt-title">Capstone: Board Simulation (60–75 min)</div>
+          <div class="wt-desc">Present the complete Strategy Brief. The room plays the board. "Why should we fund this? What risk haven't you addressed?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 11: Design Principles ===================== -->
+<div class="slide" data-notes="Five principles. Hit #1 (build every session) and #2 (opinionated) hardest — those are the experiential differentiators. If Carlos asks 'how is this different from a lecture course?' — point here. Every session has hands-on building, and every session opens with a provocation that challenges conventional wisdom.">
+  <div class="slide-inner">
+    <div class="course-tag">Design Principles</div>
+    <h2>Five Things That Make<br>This Best-in-Class</h2>
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-num">1</div>
+        <div class="principle-body">
+          <div class="pr-title">Build in every session</div>
+          <div class="pr-desc">Prototype in M1. Cost model in M3. Eval dashboard in M4. Governance policy in M5. Pitch in M6. Every session has a hands-on build moment.</div>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">2</div>
+        <div class="principle-body">
+          <div class="pr-title">Opinionated throughout</div>
+          <div class="pr-desc">"Your data is not your moat." "AI will compress your margins before it expands them." Every module opens with a provocation. Opinions attract seniors.</div>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">3</div>
+        <div class="principle-body">
+          <div class="pr-title">One case study format, repeated</div>
+          <div class="pr-desc">Bet → Crack → Correction. Klarna, Jasper, Air Canada, Samsung, Duolingo. Same 3-act structure every module.</div>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">4</div>
+        <div class="principle-body">
+          <div class="pr-title">Peer challenge is structural</div>
+          <div class="pr-desc">Partner attacks your moat, stress-tests your pricing, red-teams your evals. Stakes escalate. M6 is a full board simulation.</div>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">5</div>
+        <div class="principle-body">
+          <div class="pr-title">External-first language</div>
+          <div class="pr-desc">Every question is about the product, not the PM. "Build a cost curve you can defend to your board" — not "reframe your thinking."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 12: What Students Leave With ===================== -->
+<div class="slide" data-notes="Four things. The Strategy Brief is the headline — that's the artifact that makes this course different from everything on the market. Hit it first and hardest. The others support it. The prompt: 'What would your VP say if you came back from a course with a board-ready strategy document instead of a certificate?'">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="course-tag">Outcomes</div>
+    <h2>What Participants Leave With</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:32px 0; text-align:left;">
+      <div style="background:rgba(212,167,58,0.08); border:2px solid rgba(212,167,58,0.25); border-radius:14px; padding:28px;">
+        <div style="font-size:28px; margin-bottom:12px;">1</div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:6px;">Board-Ready Strategy Brief</div>
+        <div style="font-size:14px; color:#8899bb; line-height:1.5;">Bet, moat, margin model, eval spec, governance framework, and pitch narrative. Built on their real product. Stress-tested by peers.</div>
+      </div>
+      <div style="background:#161822; border:1px solid #252840; border-radius:14px; padding:28px;">
+        <div style="font-size:28px; margin-bottom:12px;">2</div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:6px;">Working AI Prototype</div>
+        <div style="font-size:14px; color:#8899bb; line-height:1.5;">Built in M1 with v0/Cursor/Lovable. Proves they can move from idea to tangible product in minutes.</div>
+      </div>
+      <div style="background:#161822; border:1px solid #252840; border-radius:14px; padding:28px;">
+        <div style="font-size:28px; margin-bottom:12px;">3</div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:6px;">Economics Model</div>
+        <div style="font-size:14px; color:#8899bb; line-height:1.5;">Cost curve, cascading architecture, hybrid pricing strategy with stress tests. The thing their CFO actually wants to see.</div>
+      </div>
+      <div style="background:#161822; border:1px solid #252840; border-radius:14px; padding:28px;">
+        <div style="font-size:28px; margin-bottom:12px;">4</div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:6px;">Governance & Agent Framework</div>
+        <div style="font-size:14px; color:#8899bb; line-height:1.5;">Governance policy, org topology, agent onboarding checklist, shadow AI audit. The thing that closes enterprise deals.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 13: What Nobody Else Teaches ===================== -->
+<div class="slide" data-notes="Five differentiators. The first two are structural: full stack in one program, and artifact instead of certificate. The third is the content gap: economics depth. The fourth is experiential: build every session. The fifth is tonal: opinionated spine. If Carlos only remembers one thing from this slide, make it #1: Reforge charges for 6 separate courses to cover what we do in one coherent arc.">
+  <div class="slide-inner">
+    <div class="course-tag">Differentiation</div>
+    <h2>What Nobody Else Teaches</h2>
+    <div class="diff-blocks">
+      <div class="diff-block">
+        <div class="diff-num">1</div>
+        <div class="diff-body">
+          <div class="df-title">The full strategic stack in one program</div>
+          <div class="df-desc">Reforge fragments bet / moat / margin / evals / governance across 6 separate paid courses. We thread them into one arc where each piece depends on the last.</div>
+        </div>
+      </div>
+      <div class="diff-block">
+        <div class="diff-num">2</div>
+        <div class="diff-body">
+          <div class="df-title">A real artifact, not a certificate</div>
+          <div class="df-desc">Participants leave with a board-ready strategy brief built on their actual product — not a hypothetical case study or a participation badge.</div>
+        </div>
+      </div>
+      <div class="diff-block">
+        <div class="diff-num">3</div>
+        <div class="diff-body">
+          <div class="df-title">Economics depth</div>
+          <div class="df-desc">Nobody does a full module on AI unit economics with cascading models, cost curves, and hybrid pricing. M3 could be the module people talk about.</div>
+        </div>
+      </div>
+      <div class="diff-block">
+        <div class="diff-num">4</div>
+        <div class="diff-body">
+          <div class="df-title">Build every session</div>
+          <div class="df-desc">In a market of lecture-heavy and reading-heavy courses, participants building something in every session is genuinely differentiated.</div>
+        </div>
+      </div>
+      <div class="diff-block">
+        <div class="diff-num">5</div>
+        <div class="diff-body">
+          <div class="df-title">The opinionated spine</div>
+          <div class="df-desc">Most courses hedge. This one has a point of view. Opinions attract senior audiences; balanced summaries attract beginners.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 14: Decisions Needed ===================== -->
+<div class="slide" data-notes="Three decisions we need alignment on before we detail the modules. Don't rush past this. Ask each one and wait for a response. The module titles decision affects marketing. The M4/M5 overlap affects how we position against our own courses. The tone decision affects every slide we build from here.">
+  <div class="slide-inner">
+    <div class="course-tag">Open Decisions</div>
+    <h2>Three Things We Need<br>to Align On</h2>
+    <div class="decisions">
+      <div class="decision">
+        <div class="decision-icon">①</div>
+        <div class="decision-body">
+          <div class="dec-q">Module titles: strategic questions or evolution framing?</div>
+          <div class="dec-rec">Recommendation: "The Bet / The Moat / The Margin / The Contract / The Guardrails / The Pitch." Questions a CPO asks. More marketable than "Certainty → Probabilistic thinking."</div>
+        </div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">②</div>
+        <div class="decision-body">
+          <div class="dec-q">How much should M4 (Evals) and M5 (Governance) overlap with standalone courses?</div>
+          <div class="dec-rec">Recommendation: the strategic 20% a product leader needs. Not the operational 80%. This course connects to — but doesn't replace — dedicated programs.</div>
+        </div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">③</div>
+        <div class="decision-body">
+          <div class="dec-q">How opinionated are we willing to go?</div>
+          <div class="dec-rec">Recommendation: commit to the True/False energy in every module. "Your data is not your moat" is a bold claim. If we soften after M1, it feels like bait-and-switch.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 15: Next Steps ===================== -->
+<div class="slide" data-notes="Be specific about what you need: 'Are you aligned on the arc and the six strategic questions? If yes, we start detailing M1 this week.' Don't leave without a clear yes/no. If he says 'I need to think about it' — ask which specific part. If yes, the timeline is clear.">
+  <div class="slide-inner">
+    <div class="course-tag">Timeline</div>
+    <h2>Next Steps</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-when">Today</div>
+        <div class="timeline-what"><strong>Validate the arc.</strong> Are we aligned on the six strategic questions, the throughline artifact, and the external focus?</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-when">This week</div>
+        <div class="timeline-what"><strong>Finalize M1.</strong> Daria's draft is strong. Apply review comments, reframe for external focus, lock minute-by-minute plan.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-when">Next week</div>
+        <div class="timeline-what"><strong>Dry run M1.</strong> Pre-teach with Daria, Carlos, Dana. Time-check. Stress-test the flow. Then go live.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-when">Ongoing</div>
+        <div class="timeline-what"><strong>Detail M2–M6</strong> at the same depth as M1. One module per cycle. Prioritize M3 (economics) — highest differentiation.</div>
+      </div>
+    </div>
+    <p style="margin-top:24px; font-size:17px; color:#D4A73A; font-weight:600;">The question for today: are we aligned on this direction?</p>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 16: Closing ===================== -->
+<div class="slide" data-notes="End on the question. Don't end on a statement. You want Carlos to respond. If he says yes: 'Great, M1 is detailed by end of week.' If he says 'I need to think about it': 'What specifically? Let's talk through it now.' If he pushes on timeline: 'M1 is already drafted. The reframe is surgical, not a rebuild. We can be live next week.'">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="course-tag">AI Product Strategy Certification</div>
+    <h1 style="font-size:44px; margin-bottom:32px;">This Is Not a Course<br>About AI Frameworks.</h1>
+    <div class="big-quote" style="font-size:24px; margin-bottom:40px;">
+      It's about building AI products that are <em>defensible</em>, <em>profitable</em>, and <em>trustworthy</em> — and having the strategy document to prove it.
+    </div>
+    <p style="font-size:18px; color:#8899bb; max-width:600px; margin:0 auto; line-height:1.7;">Participants start with an idea. They leave with a board-ready strategy brief built on their real product, challenged by peers, and ready to present Monday morning.</p>
+    <div class="flow-line" style="margin-top:40px; text-align:center; font-size:16px; color:#D4A73A;">
+      The Bet → The Moat → The Margin → The Contract → The Guardrails → The Pitch
+    </div>
+  </div>
+</div>
+
+<!-- ===================== UI CHROME ===================== -->
+<div class="nav">
+  <button class="nav-btn" onclick="prev()" title="Previous (←)">‹</button>
+  <button class="nav-btn" onclick="next()" title="Next (→)">›</button>
+</div>
+
+<div class="slide-counter"><span id="current">1</span> / <span id="total">16</span></div>
+
+<div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+<div class="help-hint">← → navigate · S speaker notes · F fullscreen</div>
+
+<div class="speaker-notes" id="speaker-notes">
+  <div class="notes-tag">Speaker Notes</div>
+  <div id="notes-content"></div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  let notesVisible = false;
+
+  function show(idx) {
+    slides.forEach((s, i) => { s.classList.toggle('active', i === idx); });
+    current = idx;
+    document.getElementById('current').textContent = idx + 1;
+    document.getElementById('progress-bar').style.width = ((idx + 1) / total * 100) + '%';
+    const notes = slides[idx].getAttribute('data-notes') || '';
+    document.getElementById('notes-content').innerHTML = notes || '<em style="color:#444;">No notes for this slide.</em>';
+  }
+
+  function next() { if (current < total - 1) show(current + 1); }
+  function prev() { if (current > 0) show(current - 1); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+    else if (e.key === 's' || e.key === 'S') {
+      notesVisible = !notesVisible;
+      document.getElementById('speaker-notes').classList.toggle('visible', notesVisible);
+    }
+    else if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 60) { diff > 0 ? next() : prev(); }
+  });
+
+  show(0);
+</script>
+
+</body>
+</html>
