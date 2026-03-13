@@ -103,7 +103,21 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 7 — M1: The Bet
+## Slide 7 — Every Module Has a Wow Moment
+
+> "Carlos, you asked about the wow moment in each session. Here they are. Every module has one peak moment — the thing participants will text their colleagues about during the break."
+
+> "M1 — they build a working prototype in 15 minutes. M2 — they discover they're one API change from disaster and design the kill switch. M3 — they model their own product's cost curve and watch 80% margins collapse to 40% on their own numbers. M4 — they see side-by-side that 85% with an audit trail beats 95% without. M5 — a 5-minute checklist reveals shadow AI spend they didn't know existed. M6 — they present to the room and the room plays their board."
+
+> "Six modules. Six wow moments. Zero filler."
+
+- Walk through each card briefly — one sentence each.
+- If Carlos wants to dig into one, go to the module detail slide. Don't explain everything here.
+- The point: every session has a peak, and they're all different in kind (build, stress-test, reveal, simulation).
+
+---
+
+## Slide 8 — M1: The Bet
 
 > "M1 sets the tone. The True/False opening — 'The best AI product wins? FALSE. Data is your moat? FALSE.' — by question 4 or 5, the room knows this isn't a beginner course."
 
@@ -117,7 +131,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 8 — M2 & M3: The Strategic Core
+## Slide 9 — M2 & M3: The Strategic Core
 
 > "M2 is about survival. Your data isn't your moat — your workflow is. They map their data flywheel, score it, find the weakest link. Then their partner plays the Big Tech attacker trying to kill their product."
 
@@ -130,7 +144,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 9 — M4 & M5: Trust & Scale
+## Slide 10 — M4 & M5: Trust & Scale
 
 > "M4 — trust isn't about accuracy. It's about perceived control. 95% accuracy with no audit trail loses to 85% with one. Participants spec an eval dashboard and a reliability contract."
 
@@ -143,7 +157,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 10 — M6: The Capstone
+## Slide 11 — M6: The Capstone
 
 > "M6 is the payoff. Everything from M1–M5 integrates into the full Strategy Brief. Then they present it."
 
@@ -156,7 +170,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 11 — Design Principles
+## Slide 12 — Design Principles
 
 > "Five things that make this best-in-class."
 
@@ -175,7 +189,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 12 — What Students Leave With
+## Slide 13 — What Students Leave With
 
 > "Four tangible things. Not certificates."
 
@@ -192,7 +206,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 13 — What Nobody Else Teaches
+## Slide 14 — What Nobody Else Teaches
 
 > "Five things. The full strategic stack in one program — Reforge charges for six. A real artifact, not a certificate. Economics depth nobody else goes near. Build every session. And an opinionated spine."
 
@@ -203,7 +217,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 14 — Decisions Needed
+## Slide 15 — Decisions Needed
 
 > "Three things I need alignment on before we detail the remaining modules."
 
@@ -218,7 +232,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 15 — Next Steps
+## Slide 16 — Next Steps
 
 > "Timeline. Today — validate the arc. Are we aligned on the six strategic questions, the throughline artifact, and the external focus?"
 
@@ -236,7 +250,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ---
 
-## Slide 16 — Closing
+## Slide 17 — Closing
 
 > "Last thing. This is not a course about AI frameworks. It's about building AI products that are defensible, profitable, and trustworthy — and having the strategy document to prove it."
 
