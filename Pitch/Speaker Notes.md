@@ -119,15 +119,15 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ## Slide 8 — M1: The Bet
 
-> "M1 sets the tone. The True/False opening — 'The best AI product wins? FALSE. Data is your moat? FALSE.' — by question 4 or 5, the room knows this isn't a beginner course."
+> "M1 sets the tone. Three True/False provocations: 'The best AI product wins? FALSE — commoditization is already here.' 'You can predict which AI feature wins? FALSE — AI produces probability distributions, not guarantees.' 'Your discovery process is fast enough? FALSE — traditional discovery takes 6–8 weeks, AI-powered discovery does it in days.' By the third reveal, the room knows this isn't a beginner course."
 
-> "Then they do a live diagnosis on a product everyone uses — Notion, Figma, Slack. Where does the strategy break under AI conditions?"
+> "Then they do a live diagnosis on a product everyone uses — Notion, Figma, Slack. Three-Axis Diagnostic: contextual moat, data advantage, platform exposure. Where does it break?"
 
-> "They apply the same diagnosis to their own product. Their partner's job: challenge the score, not validate it."
+> "They apply the same diagnostic to their own product. Their partner's job: challenge the score, not validate it. Then they write a 3-sentence 'killer memo' as the Big Tech exec whose job is to destroy their product."
 
-> "By the end of M1, they've built a prototype with AI tools and have the first layer of their Strategy Brief."
+> "The wow moment: they build a working prototype with v0, Cursor, or Lovable in 15 minutes. They leave with the first section of their Strategy Brief and a shareable link."
 
-- If Carlos asks about the True/False: "It's provocative by design. Senior audiences don't engage with balanced summaries. They engage with bold claims they can argue with."
+- If Carlos asks about the True/False: "It's provocative by design. Senior audiences don't engage with balanced summaries. They engage with bold claims they can argue with. Each module gets its own provocation — we don't front-load all six in M1."
 
 ---
 
