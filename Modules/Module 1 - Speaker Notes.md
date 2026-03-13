@@ -6,7 +6,7 @@ Teaching notes for each slide. Not a script — key things to say, energy cues, 
 
 ## Slide 1 — Title (1 min)
 
-> "Welcome. This is not a lecture. By the end of today you'll have diagnosed where your product strategy breaks under AI conditions, built a prototype with AI tools, and written the first section of a strategy brief you'll present to the room in Module 6. Let's go."
+> "Welcome. This is not a lecture. By the end of today you'll have diagnosed where your product strategy breaks under AI conditions, built a prototype with AI tools, and created the first component of a living strategy you'll present to the room in Module 6. Let's go."
 
 - Set the energy immediately. No preamble. No "let me tell you about myself" yet.
 - The three waypoints (Diagnose, Discover, Decide) are the session's backbone. Point to them.
@@ -24,12 +24,12 @@ Teaching notes for each slide. Not a script — key things to say, energy cues, 
 
 ## Slide 3 — Opening Question (2 min)
 
-> "Show of hands. How many of you are adding AI to an existing product? And how many are building something AI-native from scratch?"
+> "Show of hands. How many of you are adding AI to an existing product? And how many are building something AI-native?"
 
-> "Great — we have both. This session works for both. The strategic questions are the same. What changes is the starting point, not the destination."
+> "Great — we have both. Quick ground rule: pick a product at your company. This is not an entrepreneurship course. You're not building a startup from scratch. Pick a real product you're responsible for and we build the AI strategy around it."
 
-- Don't analyze the split. Just register it and move on.
-- This replaces the old internal-framed question. The frame is product-first, not org-first.
+- If someone doesn't have a company product: "That's fine — we have backup examples. Pick a product you admire and assume you're the PM."
+- Frame is product-first, not org-first.
 
 ---
 
@@ -64,10 +64,10 @@ Reveal sequence:
 
 > "Six strategic questions. Each builds on the last. Today: The Bet — what should we build, and how do we know fast?"
 
-> "Each session adds a layer to one document: your AI Product Strategy Brief. By Module 6, you present the complete brief. The room plays your board."
+> "Each session adds a component to one living strategy. Not a document — something interactive that compounds as you build it. Five interconnected components by M5. M6, you present the complete thing. The room plays your board."
 
 - Point to each arc node. Don't explain M2–M6 in detail — just name them.
-- Highlight the Strategy Brief: "Not worksheets. One living document. Board-ready by M6."
+- Highlight the living strategy: "Not worksheets. Not a PRD. A working strategy. Board-ready by M6."
 
 ---
 
@@ -162,7 +162,7 @@ Walk through each row — 1 minute per archetype:
 
 ## Slide 15 — Your Diagnostic (10 min)
 
-> "Now it's your turn. Score your own product. Three axes. Be ruthless. This scorecard travels with you — your M2 partner will attack it."
+> "Now it's your turn. Score your own product — the one at your company. Three axes. Be ruthless. This scorecard travels with you — your M2 partner will attack it."
 
 - Walk the room. Check people are scoring numerically, not just thinking.
 - Prompt the stuck: "Start with Platform Exposure. Who's the biggest threat?"
@@ -204,16 +204,16 @@ Walk through each row — 1 minute per archetype:
 
 > "Every vulnerability you found, every discomfort from the pair challenge, every 'oh no' in the killer memo — those exist because you've been planning deterministically in a probabilistic world."
 
-> "Today was the diagnosis. Modules 2 through 6 are the reconstruction. Fill in Section 1 of your Strategy Brief now."
+> "Today was the diagnosis. Modules 2 through 6 are the reconstruction. Fill in Component 1 of your living strategy now."
 
-- Name the Strategy Brief fields: what you're building, for whom, why now, archetype, three-axis scores, biggest vulnerability, confidence level.
+- Name the fields: what you're building, for whom, why now, archetype, three-axis scores, biggest vulnerability, confidence level.
 - This is the moment the module's thesis crystallizes. Don't rush it.
 
 ---
 
 ## Slide 20 — Bridge to M2 (2 min)
 
-> "You know what you're betting on. M2 answers: can anyone copy this in 6 months? Bring your diagnostic scorecard, your Strategy Brief Section 1, and your prototype. M2 starts where you left off."
+> "You know what you're betting on. M2 answers: can anyone copy this in 6 months? Bring your diagnostic scorecard, your living strategy Component 1, and your prototype. M2 starts where you left off."
 
 - Name what they're bringing. Make the continuity concrete.
 - End with energy: "Today you diagnosed. Starting next session, you rebuild."
@@ -232,4 +232,5 @@ Walk through each row — 1 minute per archetype:
 - **Timing is tight.** If the live diagnosis runs long (common), cut 2–3 minutes from the prototype bet. The prototype is important but the diagnostic is the session's core.
 - **Don't explain the exercises.** Show the slide. Read the instruction. Start the timer. Explanation kills momentum with senior audiences.
 - **The killer memo is the emotional peak.** Give it space. The room gets quiet during writing. That's good.
-- **External focus always.** Every question is about their product, not their team. If someone asks about internal org changes, redirect: "Great question — M5 covers org topology. Today we're focused on the product bet."
+- **External focus always.** Every question is about their product at their company, not their team. If someone asks about internal org changes, redirect: "Great question — M5 covers that. Today we're focused on the product bet."
+- **"Not entrepreneurship."** If someone brings a startup idea, redirect: "Pick a product at a company you work for or admire. We need something grounded, not hypothetical."

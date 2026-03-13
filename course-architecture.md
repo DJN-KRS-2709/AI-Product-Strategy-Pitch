@@ -10,7 +10,9 @@
 **Maven** = How to *build* AI products (tactical)
 **Product School** = How to *win* with AI products (strategic + applied)
 
-The only AI product strategy certification where you build your actual strategy — the economics model, eval spec, moat analysis, governance framework, and board pitch — across 6 live sessions on your real product.
+The only AI product strategy certification where you build your actual strategy — economics model, eval spec, moat analysis, governance framework, and board pitch — across 6 live sessions on your real product.
+
+We learn from the best material out there — Reforge, Maven, top Substack voices — and synthesize it into one coherent arc with our own advanced take. Where there's overlap across sources, it validates the topic. Where there's a gap, we fill it.
 
 ---
 
@@ -18,7 +20,9 @@ The only AI product strategy certification where you build your actual strategy 
 
 Senior product leaders who already understand AI fundamentals (tokens, RAG, fine-tuning, prompting). They've taken AIPC or equivalent. They're here because they need to make strategic decisions about AI products — what to build, how to defend it, how to price it, how to govern it, and how to pitch it to their board.
 
-This is not a foundations course. This is not an internal transformation course. This is about building AI products that win.
+**This is not a foundations course. This is not an entrepreneurship course.** Participants pick a product at their company and build the AI strategy around it. They don't build a company from scratch — they bring a real product they're responsible for.
+
+Backup: provide example products for anyone not currently at a company, but they assume the PM role for a real product.
 
 ---
 
@@ -43,27 +47,30 @@ These evolutions still happen — they're just the byproduct, not the headline.
 - M2: Features → Defensible systems
 - M3: Growth-at-all-costs → Margin-aware AI economics
 - M4: Shipping functionality → Engineering reliability
-- M5: Compliance checklist → Governance as strategic advantage
+- M5: Compliance checklist → Compounding systems that scale
 - M6: Roadmap owner → AI systems architect + executive translator
 
 ---
 
-## The Throughline Artifact: AI Product Strategy Brief
+## The Throughline Artifact: The Living Strategy
 
-One document. Six layers. Built across 6 sessions.
+Not a document. Not a PRD. Not a dissertation. A **living strategy** — interactive, compounding, co-creating with you. Something that beats at a higher frequency than an annual review cycle.
 
-Starts as a 1-pager in M1. Becomes a board-ready strategy brief by M6. Not 5 separate worksheets stapled together at the capstone — one living document that gains a new section every session.
+Five components built across M1–M5. M6 integrates and presents the whole thing.
 
-| Session | Section Added | What It Contains |
-|---------|--------------|------------------|
-| M1 | The Bet | What we're building, for whom, why now, validation evidence, probabilistic confidence level |
-| M2 | The Moat | Data flywheel map, defensibility analysis, vendor portability plan, encroachment defense |
-| M3 | The Margin | Cost model with cascading, pricing strategy, P&L projection, stress tests |
-| M4 | The Contract | Eval spec, reliability targets, confidence UX design, HITL plan, golden dataset strategy |
-| M5 | The Guardrails | Governance framework, agent topology, compliance posture, autonomy boundaries |
-| M6 | Integration | Stress-test the full brief, refine the narrative, rehearse the pitch |
+| Session | Component | What It Contains |
+|---------|-----------|------------------|
+| M1 | **The Bet** | What we're building, for whom, why now, validation evidence, probabilistic confidence level |
+| M2 | **The Moat** | Data flywheel map, defensibility analysis, vendor portability plan, encroachment defense |
+| M3 | **The Margin** | Cost model with cascading, pricing strategy, P&L projection, stress tests |
+| M4 | **The Contract** | Eval spec, reliability targets, confidence UX design, HITL plan, golden dataset strategy |
+| M5 | **The Guardrails** | Compounding system design, governance framework, agent topology, feedback loops |
 
-**This is the capstone.** By M6, participants present the complete brief. Not a slide deck about what they learned — a strategy document they can use on Monday.
+**M6 = Integration.** Stress-test the full strategy, refine the narrative, present it to the room.
+
+Each component connects to the others — they're pillars of one strategy, not sequential steps in a checklist. The build order is sequential (you can't price what you can't defend), but the iteration order may differ in practice.
+
+**They don't leave with a certificate. They leave with a weapon.**
 
 ---
 
@@ -71,16 +78,18 @@ Starts as a 1-pager in M1. Becomes a board-ready strategy brief by M6. Not 5 sep
 
 ### 1. Build in every session
 
-Every module includes a hands-on build moment. This is what Reforge can't do (async/reading-heavy) and Maven doesn't sustain (capstone only, not continuous).
+Every module includes a hands-on build moment that produces something tangible they take home. Not just a feeling — something they didn't have yesterday.
 
-| Module | Build Moment |
-|--------|-------------|
-| M1 | Prototype a product concept with AI tools (v0, Cursor, Lovable) |
-| M2 | Map your data flywheel and score it live |
-| M3 | Build a cost curve and pricing model (spreadsheet or AI-assisted) |
-| M4 | Spec an eval dashboard with metrics, judges, drift alerts |
-| M5 | Draft a governance policy and agent onboarding checklist |
-| M6 | Present the full brief, get challenged by the room |
+| Module | Build Moment | Tangible Output |
+|--------|-------------|-----------------|
+| M1 | Prototype a product concept with AI tools (v0, Cursor, Lovable) | Shareable link to working prototype |
+| M2 | Map your data flywheel and score it live | Scored flywheel map + portability checklist |
+| M3 | Build a cost curve and pricing model | Cost model with stress tests |
+| M4 | Spec an eval dashboard with metrics, judges, drift alerts | Eval dashboard spec + reliability contract |
+| M5 | Design a compounding system + governance policy | System architecture + governance policy |
+| M6 | Present the full strategy, get challenged by the room | Complete, stress-tested living strategy |
+
+Each session's build connects to the final artifact. By M6, they don't start from scratch — they assemble 5 components they've already built.
 
 ### 2. Opinionated throughout
 
@@ -93,7 +102,7 @@ The True/False opening in M1 sets the tone: conventional wisdom is wrong, and he
 - **M5:** "Your governance framework is a sales asset, not a compliance burden."
 - **M6:** "The roadmap is an output, not your job description."
 
-These provocations are currently front-loaded in M1's True/False section. Distribute them — one per module — so the opinionated tone is sustained, not exhausted in the first hour.
+One provocation per module — the opinionated tone is sustained, not exhausted in the first hour.
 
 ### 3. One case study format, repeated
 
@@ -118,7 +127,7 @@ The people in the room are assets — but "pair work" is a format, not a mechani
 | M2 | Partner attacks your moat: "here's who kills you" |
 | M3 | Partner stress-tests your pricing: "what if inference costs 3x" |
 | M4 | Partner red-teams your eval spec: "what failure mode did you miss" |
-| M5 | Partner audits your governance: "what agent boundary is too loose" |
+| M5 | Partner audits your system: "what feedback loop is broken" |
 | M6 | Full room challenges your pitch (board simulation) |
 
 Stakes escalate. By M6, participants present to a hostile (friendly) board. The discomfort is the pedagogy.
@@ -154,7 +163,7 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 **Peer challenge:** Partner challenges your diagnostic scores and names one AI-native competitor attacking your vulnerability
 
-**Artifact contribution:** The Bet section of the Strategy Brief — what you're building, for whom, why now, validation evidence
+**Artifact component:** The Bet — what you're building, for whom, why now, validation evidence
 
 **Bridge to M2:** "You now know what you're betting on. M2 answers: can anyone else copy this in 6 months?"
 
@@ -177,7 +186,7 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 **Peer challenge:** Partner plays the Big Tech attacker — "here's exactly how I kill your product"
 
-**Artifact contribution:** The Moat section — data flywheel map, defensibility scores, vendor portability checklist
+**Artifact component:** The Moat — data flywheel map, defensibility scores, vendor portability checklist
 
 **Bridge to M3:** "You know what's defensible. M3 answers: will the economics actually work, or will inference costs eat your margin?"
 
@@ -200,7 +209,7 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 **Peer challenge:** Partner stress-tests the model — "what happens when inference costs 3x? When your heaviest user segment doubles?"
 
-**Artifact contribution:** The Margin section — cost model with cascading, pricing strategy, P&L projection with stress tests
+**Artifact component:** The Margin — cost model with cascading, pricing strategy, P&L projection with stress tests
 
 **Bridge to M4:** "The economics work on paper. M4 answers: will users actually trust the output enough to pay for it?"
 
@@ -223,31 +232,31 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 **Peer challenge:** Partner red-teams the eval spec — "what failure mode did you miss? Where does the system degrade silently?"
 
-**Artifact contribution:** The Contract section — eval spec, reliability targets, confidence UX design, HITL architecture, golden dataset plan
+**Artifact component:** The Contract — eval spec, reliability targets, confidence UX design, HITL architecture, golden dataset plan
 
-**Bridge to M5:** "Users trust the system. M5 answers: what happens when you scale it with agents, and who's accountable when things go wrong?"
+**Bridge to M5:** "Users trust the system. M5 answers: what happens when you scale it, and how do you build systems that compound instead of collapse?"
 
 ---
 
 ### M5: The Guardrails — What breaks when this scales?
 
-**Learning Objective:** Ship a governance posture that accelerates enterprise deals — covering agent orchestration, autonomy boundaries, regulatory compliance, and shadow AI exposure across your organization.
+**Learning Objective:** Build systems that compound — governance that accelerates deals, feedback loops that improve quality with every iteration, and infrastructure that scales without breaking trust.
 
 **Key content:**
+- **Building compounding systems:** How to create infrastructure where quality improves with usage — recursive learning, feedback loops, knowledge that compounds across teams and domains instead of siloing
+- **Connecting context:** Breaking domain silos so knowledge flows across products and teams. The system learns from every interaction, not just the ones in your silo.
 - Responsible AI as competitive differentiator + board risk translation (EU AI Act, explainability requirements)
 - Multi-agent orchestration governance: autonomy boundaries, tool-calling safety, memory management
 - ROI evaluation for agentic systems vs. traditional automation
-- AI PM evolution: specs and data ownership replace PRDs; hybrid human-AI loops
-- Org topology: centralized vs. embedded vs. agent-orchestrated teams
-- Shadow AI audit: identifying unsanctioned AI spend/tools across the org
+- Shadow AI audit: identifying unsanctioned AI spend/tools across the org (Spotify example: 1,000 tools → 15 after audit, massive cost savings)
 
 **Case study:** Samsung data leak — how an internal AI failure became an external governance story
 
-**Build moment:** Draft governance policy + org topology for AI/agent stack; include agent onboarding checklist (proficiency levels, invocation playbooks) + shadow AI audit checklist
+**Build moment:** Design a compounding system architecture for their product + draft governance policy + shadow AI audit of their org
 
-**Peer challenge:** Partner audits governance — "what agent boundary is too loose? What's your exposure if a regulator calls tomorrow?"
+**Peer challenge:** Partner audits the system — "what feedback loop is broken? What agent boundary is too loose? What's your exposure if a regulator calls tomorrow?"
 
-**Artifact contribution:** The Guardrails section — governance framework, agent topology, compliance posture, autonomy boundaries, shadow AI audit
+**Artifact component:** The Guardrails — compounding system design, governance framework, agent topology, feedback loops, shadow AI audit
 
 **Bridge to M6:** "You have the full strategy: bet, moat, margin, trust, guardrails. M6 is about making it sing — the narrative that gets this funded and shipped."
 
@@ -266,18 +275,18 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 **Case study:** Duolingo's AI transformation narrative — how they told the investor story
 
-**Build moment:** Finalize and present the complete AI Product Strategy Brief
+**Build moment:** Finalize and present the complete living strategy
 
 **Peer challenge:** Full room challenges each pitch — board simulation. "Why should we fund this? What's the risk you haven't addressed?"
 
-**Artifact contribution:** Integration — the complete Strategy Brief, stress-tested and pitch-ready
+**Artifact component:** Integration — the complete strategy, stress-tested and pitch-ready
 
-**Capstone (60-75 min):** Present the full brief:
+**Capstone (60-75 min):** Present the full strategy:
   - Continuous roadmap
   - Margin/P&L with cascading, pricing, stress tests
   - Eval strategy and dashboard spec
   - Data moat + encroachment/portability plan
-  - Governance framework + org topology + shadow AI audit
+  - Compounding system design + governance framework
 
 ---
 
@@ -285,11 +294,11 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 
 1. **The full strategic stack in one program.** Reforge splits bet/moat/margin/evals/governance across 6 separate paid courses. This threads them into one coherent arc where each piece depends on the last.
 
-2. **A real artifact, not a certificate.** Participants leave with a board-ready strategy brief built on their actual product — not a hypothetical case study or a participation badge.
+2. **A living strategy, not a certificate.** Participants leave with a working strategy built on their actual product — five interconnected components, stress-tested by peers, presentable Monday morning.
 
 3. **Economics depth.** Nobody does a full module on AI unit economics with cascading models, cost curves, and hybrid pricing. This is the most underserved topic in AI product education. M3 could be the module people talk about.
 
-4. **The build-every-session cadence.** In a market of lecture-heavy and reading-heavy courses, participants building something in every session is genuinely differentiated — and it proves the course's thesis (AI accelerates everything, including how you learn strategy).
+4. **The build-every-session cadence.** In a market of lecture-heavy and reading-heavy courses, participants building something tangible in every session is genuinely differentiated — and it proves the course's thesis (AI accelerates everything, including how you learn strategy).
 
 5. **The opinionated spine.** Most courses hedge. This one has a point of view: data isn't your moat, margins will compress before they expand, governance is a sales weapon. Opinions attract senior audiences; balanced summaries attract beginners.
 
@@ -298,8 +307,9 @@ Per Carlos's directive: every module question is about the product, not the PM. 
 ## Open Design Decisions
 
 - [ ] **Module titles:** Does "The Bet / The Moat / The Margin / The Contract / The Guardrails / The Pitch" resonate, or do we keep the evolution framing as the primary label?
-- [ ] **M4/M5 overlap with standalone courses:** How much should Evals (M4) and Governance (M5) overlap with Product School's dedicated courses on those topics? Recommendation: cover the strategic 20% a product leader needs, not the operational 80%.
+- [ ] **M4/M5 overlap with standalone courses:** How much should Evals (M4) and Governance (M5) overlap with Product School's dedicated courses on those topics? Recommendation: cover the strategic 20% a product leader needs, not the operational 80%. Carlos wants to see how tangible these are — especially M5.
 - [ ] **Opinionated tone commitment:** The True/False opening in M1 is bold. If we commit to that edge in all 6 modules, it becomes the course's signature. If we soften after M1, it feels like bait-and-switch.
 - [x] **5 AI Value Archetypes:** Defined in M1 slides — Automator, Copilot, Oracle, Creator, Orchestrator. Each with margin profile, governance burden, and example.
 - [x] **Prototype Bet logistics:** Defined in M1 slides — 15 min, v0/Cursor/Lovable, minimum output is a shareable link, account setup as pre-work.
-- [ ] **Own product vs. shared fictive company:** Should applied exercises use each participant's real product, or should everyone work on one shared fictive company? Current design: hybrid — live diagnosis on a shared product (Notion/Figma/Slack), all individual work on their own product. The "board-ready Monday morning" promise depends on own-product work. A shared company would simplify peer challenge and let the instructor go deeper, but risks feeling academic and loses the key differentiator vs. Reforge/Maven. Needs alignment with Carlos.
+- [x] **Own product vs. shared fictive company:** RESOLVED (Mar 13). Case studies during class for shared examples. Applied work on their own product at their company. NOT entrepreneurship. Backup examples for anyone not at a company.
+- [x] **Artifact format:** RESOLVED (Mar 13). Not a document/PRD/dissertation. A "living strategy" — interactive, compounding, co-creating. Five interconnected components (not layers, not steps).

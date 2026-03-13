@@ -21,7 +21,7 @@ Three waypoints for today:
 2. **Discover** — AI-powered discovery that delivers signal in days, not quarters
 3. **Decide** — Probabilistic prioritization: confidence intervals, not commitments
 
-You leave today with: Section 1 of your AI Product Strategy Brief + a working prototype.
+You leave today with: Component 1 of your living strategy + a working prototype.
 
 ---
 
@@ -30,7 +30,7 @@ You leave today with: Section 1 of your AI Product Strategy Brief + a working pr
 
 - 5 min — Opening: Who's in the room + your AI strategy baseline
 - 8 min — Provocation: True or False — stress-testing what you think you know
-- 5 min — The Arc: Six questions, one strategy brief, board-ready by M6
+- 5 min — The Arc: Six questions, one living strategy, board-ready by M6
 - 12 min — Lecture: AI-native discovery and probabilistic thinking
 - 7 min — Case Study: The company that validated in 4 days
 - 8 min — Framework: 5 AI Value Archetypes
@@ -50,10 +50,10 @@ Two options side by side:
 **A — Adding AI to an existing product**
 Your product exists. You're figuring out where AI creates the most value.
 
-**B — Building an AI-native product from scratch**
-You're starting fresh. AI is the core, not a feature.
+**B — Building an AI-native product**
+AI is the core of your product, not a bolt-on feature.
 
-Both paths face the same strategic questions. The starting point differs. The destination doesn't.
+Pick a product at your company. Not a startup idea — a real product you're responsible for. Both paths face the same strategic questions.
 
 ---
 
@@ -62,7 +62,7 @@ Both paths face the same strategic questions. The starting point differs. The de
 
 Write your answer. Right now. Keep it to 3 sentences.
 
-Keep it. You'll revisit this in Module 6. This is Artifact #1 of your Strategy Brief.
+Keep it. You'll revisit this in Module 6. This is Artifact #1 of your living strategy.
 
 ---
 
@@ -80,11 +80,11 @@ Vote first. Then we reveal. Then we argue.
 ---
 
 ## Slide 6 — The Arc
-**Six Questions. One Strategy Brief.**
+**Six Questions. One Living Strategy.**
 
 Show horizontal flow: M1: The Bet (highlighted/active) → M2: The Moat → M3: The Margin → M4: The Contract → M5: The Guardrails → M6: The Pitch
 
-Below: Your Strategy Brief — Built Across 6 Sessions. One document. Six layers. Today you write Section 1: The Bet.
+Below: Your Living Strategy — Built Across 6 Sessions. Not a document — five interconnected components. Today you build Component 1: The Bet.
 
 ---
 
@@ -227,7 +227,7 @@ Three checkmarks:
 2. ✓ Learned to think probabilistically — Confidence intervals, not promises
 3. ✓ Built a prototype — One idea, made tangible with AI tools
 
-Strategy Brief — Section 1: The Bet. Fill in: What you're building · For whom · Why now · AI Value Archetype · Three-Axis scores · Biggest vulnerability · Confidence level
+Living Strategy — Component 1: The Bet. Fill in: What you're building · For whom · Why now · AI Value Archetype · Three-Axis scores · Biggest vulnerability · Confidence level
 
 ---
 
@@ -236,7 +236,7 @@ Strategy Brief — Section 1: The Bet. Fill in: What you're building · For whom
 
 M2 is about building the data flywheel that makes your product defensible — and designing the kill switch for when your vendor changes terms.
 
-Bring to M2: Your Three-Axis Diagnostic scorecard · Strategy Brief Section 1 · Your prototype
+Bring to M2: Your Three-Axis Diagnostic scorecard · Living Strategy Component 1 · Your prototype
 
 Show the arc with M1 completed and M2 highlighted as next.
 
