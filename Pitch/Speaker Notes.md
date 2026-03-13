@@ -219,7 +219,7 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 ## Slide 15 — Decisions Needed
 
-> "Three things I need alignment on before we detail the remaining modules."
+> "Four things I need alignment on before we detail the remaining modules."
 
 > "One — module titles. I'm recommending 'The Bet, The Moat, The Margin, The Contract, The Guardrails, The Pitch.' Questions a CPO asks. More marketable than the evolution framing."
 
@@ -227,8 +227,10 @@ Casual talking points for each slide. Not a script — just the key things to sa
 
 > "Three — tone. The True/False energy — are we committing to that in every module? I think we should. If we soften after M1, it feels like bait-and-switch."
 
+> "Four — should exercises use each participant's own product, or should everyone work on one shared fictive company? Right now the design is a hybrid: the live diagnosis is on a shared product everyone knows, but all the applied work — diagnostic, peer challenge, strategy brief — is on their own product. That's what makes the 'board-ready Monday morning' promise real. A shared company would make peer work easier, but it turns this into a case study course — which is what everyone else already does."
+
 - Ask each one and wait for a response. Don't rush past this slide.
-- If Carlos defers: "Can we at least align on #1 today? That affects the slides, the marketing, and how participants talk about the course."
+- If Carlos defers: "Can we at least align on #1 and #4 today? Those affect everything we build from here."
 
 ---
 
